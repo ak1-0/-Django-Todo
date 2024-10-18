@@ -1,0 +1,32 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Pytest cache
+.pytest_cache/
+pytest_cache
+
+# Local development files
+*.sqlite3 
+*.log  
+
+# Environment variables
+.env 
+.venv/
+venv
+/venv
+
+# IDE and editor files
+.idea/
+idea
+.vscode/
+vscode
+*.swp 
+
+# Static files and other build artifacts
+staticfiles/
+media/
+*.egg-info/
+
+# Backup files
+*~ 
