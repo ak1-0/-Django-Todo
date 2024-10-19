@@ -2,6 +2,7 @@
 [![Pytest](https://img.shields.io/badge/Tested%20with-Pytest-blue.svg)](https://docs.pytest.org/)
 [![Django REST Framework](https://img.shields.io/badge/Django-REST%20Framework-green.svg)](https://www.django-rest-framework.org/)
 [![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue.svg)](https://www.postgresql.org/)
+![Work In Progress](https://img.shields.io/badge/Work%20In%20Progress-orange?style=flat-square)
 
 Этот проект представляет собой простое **Django Todo приложение**, которое предлагает полнофункциональный REST API для управления задачами. Приложение защищено с помощью **Token Authentication**, и поддерживает все основные операции CRUD (Create, Read, Update, Delete). Кроме того, проект включает **автоматическое тестирование** API с использованием библиотек **Pytest** и **Requests**, что обеспечивает стабильность и надежность.
 
