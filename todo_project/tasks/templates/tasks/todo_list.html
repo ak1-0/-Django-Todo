@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Your Todos</h1>
+<a href="{% url 'todo_create' %}" class="btn btn-primary">Create New Task</a>
+<ul class="list-group mt-3">
+    {% for todo in todos %}
+        <li class="list-group-item">
+            <strong>{{ todo.title }}</strong> - {{ todo.description }}
+            <div class="float-right">
+                <a href="{% url 'todo_edit' todo.id %}" class="btn btn-sm btn-info">Edit</a>
+                <a href="{% url 'todo_delete' todo.id %}" class="btn btn-sm btn-danger">Delete</a>
+            </div>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
