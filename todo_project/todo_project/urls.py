@@ -5,8 +5,8 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('tasks/', include('tasks.urls')),
-    path('login/', auth_views.LoginView.as_view(), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(next_page='/'), name='logout'),
+    path('tasks/', include('tasks.urls')),  # Подключаем все маршруты из tasks.urls
+    path('login/', auth_views.LoginView.as_view(), name='login'),  # Страница входа
+    path('logout/', auth_views.LogoutView.as_view(next_page='/'), name='logout'),  # Страница выхода
     path('', RedirectView.as_view(url='tasks/')),  # Перенаправляем на список задач
 ]

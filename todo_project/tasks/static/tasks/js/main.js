@@ -1,6 +1,6 @@
 function deleteTodo(todoId) {
     if (confirm('Вы уверены, что хотите удалить эту задачу?')) {
-        fetch(`/tasks/${todoId}/delete/`, {
+        fetch(`/tasks/api/tasks/${todoId}/`, { 
             method: 'DELETE',
             headers: {
                 'X-CSRFToken': getCookie('csrftoken'),  // Обязательно добавьте CSRF-токен для защиты
@@ -22,7 +22,6 @@ function getCookie(name) {
         const cookies = document.cookie.split(';');
         for (let i = 0; i < cookies.length; i++) {
             const cookie = cookies[i].trim();
-            // Check if this cookie string begins with the name we want
             if (cookie.substring(0, name.length + 1) === (name + '=')) {
                 cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
                 break;
