@@ -31,6 +31,9 @@ class TodoDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
     permission_classes = [IsAuthenticated]
+    
+    def perform_update(self, serializer):
+        serializer.save(user=self.request.user)
 
 
 @login_required
