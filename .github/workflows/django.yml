@@ -52,8 +52,8 @@ jobs:
 
     - name: Run migrations
       run: |
-        python manage.py migrate
+        python todo_project/manage.py migrate
 
     - name: Run tests
       run: |
-        pytest
+        python todo_project/manage.py test
